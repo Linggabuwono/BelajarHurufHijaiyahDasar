@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:id="@+id/alifpop"
+        android:id="@+id/soal"
         android:background="@drawable/alifpop"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
@@ -43,6 +43,18 @@
         android:layout_margin="10dp"
         android:background="@drawable/ta"
         android:layout_toRightOf="@+id/jawaban2"/>
+
+    <TextView
+        android:text="NILAI : "
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/soal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        android:id="@+id/nilai" />
 
     <ImageButton
         android:layout_width="70dp"

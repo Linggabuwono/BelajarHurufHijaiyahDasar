@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.view.WindowManager;
 
 public class BelajarActivity extends AppCompatActivity {
     ImageButton pindah;
@@ -13,6 +14,8 @@ public class BelajarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_belajar);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         pindah = (ImageButton) findViewById(R.id.menubhd);
         pindah.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +56,17 @@ public class BelajarActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //suaraButton.start();
                 Intent intent = new Intent(BelajarActivity.this, HijaiyahUActivity.class);
+                startActivity(intent);
+                //mp.stop();
+            }
+        });
+
+        pindah = (ImageButton) findViewById(R.id.back);
+        pindah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //suaraButton.start();
+                Intent intent = new Intent(BelajarActivity.this, MainActivity.class);
                 startActivity(intent);
                 //mp.stop();
             }
