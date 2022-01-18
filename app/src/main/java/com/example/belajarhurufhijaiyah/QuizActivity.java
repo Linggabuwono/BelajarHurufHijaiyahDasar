@@ -43,5 +43,16 @@ public class QuizActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        pindah = (ImageButton) findViewById(R.id.back);
+        pindah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //suaraButton.start();
+                Intent intent = new Intent(QuizActivity.this, MainActivity.class);
+                startActivity(intent);
+                //mp.stop();
+            }
+        });
     }
 }

@@ -49,5 +49,16 @@ public class HijaiyahUActivity extends AppCompatActivity {
                 //mp.stop();
             }
         });
+
+        pindah = (ImageButton) findViewById(R.id.back);
+        pindah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //suaraButton.start();
+                Intent intent = new Intent(HijaiyahUActivity.this, BelajarActivity.class);
+                startActivity(intent);
+                //mp.stop();
+            }
+        });
     }
 }

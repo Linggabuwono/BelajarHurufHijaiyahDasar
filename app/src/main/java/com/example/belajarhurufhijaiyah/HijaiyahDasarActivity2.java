@@ -1,5 +1,6 @@
 package com.example.belajarhurufhijaiyah;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -163,6 +164,17 @@ public class HijaiyahDasarActivity2 extends AppCompatActivity {
                 TampilGambar.setImageResource(R.drawable.fapop);
                 TampilGambar.startAnimation(animScale);
                 Suarafa.start();
+            }
+        });
+
+        pindah = (ImageButton) findViewById(R.id.back);
+        pindah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //suaraButton.start();
+                Intent intent = new Intent(HijaiyahDasarActivity2.this, HijaiyahDasarActivity.class);
+                startActivity(intent);
+                //mp.stop();
             }
         });
     }

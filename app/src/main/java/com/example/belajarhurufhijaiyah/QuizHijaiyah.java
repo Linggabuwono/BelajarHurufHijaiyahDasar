@@ -1,5 +1,6 @@
 package com.example.belajarhurufhijaiyah;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -7,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class QuizHijaiyah extends AppCompatActivity {
+    ImageButton pindah;
     ImageButton pilih;
     ImageButton jawaban1,jawaban2,jawaban3;
     ImageView soal;
@@ -30,6 +33,8 @@ public class QuizHijaiyah extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_hijaiyah);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         soal = (ImageView) findViewById(R.id.soal);
         jawaban1 = (ImageButton) findViewById(R.id.jawaban1);
@@ -57,6 +62,17 @@ public class QuizHijaiyah extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 isCorrect(j3 ==s);
+            }
+        });
+
+        pindah = (ImageButton) findViewById(R.id.back);
+        pindah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //suaraButton.start();
+                Intent intent = new Intent(QuizHijaiyah.this, QuizActivity.class);
+                startActivity(intent);
+                //mp.stop();
             }
         });
     }
@@ -109,5 +125,4 @@ public class QuizHijaiyah extends AppCompatActivity {
 
         tampilSkor.setText("SKOR : "+ nilai);
     }
-
 }
