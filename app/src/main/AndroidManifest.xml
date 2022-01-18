@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.belajarhurufhijaiyah">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity android:name=".HijaiyahUActivity3"></activity>
+        <activity android:name=".HijaiyahUActivity2" />
+        <activity android:name=".HijaiyahUActivity1" />
+        <activity android:name=".HijaiyahUActivity" />
+        <activity android:name=".HijaiyahIActivity3" />
+        <activity android:name=".HijaiyahIActivity2" />
+        <activity android:name=".HijaiyahIActivity1" />
+        <activity android:name=".HijaiyahIActivity" />
+        <activity android:name=".HijaiyahAActivity3" />
+        <activity android:name=".HijaiyahAActivity2" />
+        <activity android:name=".HijaiyahAActivity1" />
+        <activity android:name=".HijaiyahAActivity" />
+        <activity android:name=".BelajarActivity" />
+        <activity android:name=".HijaiyahDasarActivity" />
+        <activity android:name=".QuizHijaiyah3" />
+        <activity android:name=".QuizHijaiyah2" />
+        <activity android:name=".HijaiyahDasarActivity2" />
+        <activity
+            android:name=".QuizHijaiyah"
+            android:label="@string/title_activity_quiz_hijaiyah"
+            android:theme="@style/NoActionBar" />
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".HijaiyahDasarActivity3" />
+        <activity android:name=".HijaiyahDasarActivity1" />
+        <activity android:name=".HijaiyahDasarActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
